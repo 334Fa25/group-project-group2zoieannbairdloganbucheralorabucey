@@ -1,0 +1,158 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f8f4e1;
+    color: #463c2f;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #7a8b5e;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ========== Base (Mobile-First) ========== */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f3e1;
+    color: #4b3e2e;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d9cb94;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #3f4b32;
+    margin: 0;
+}
+
+/* Nav */
+
+.nav {
+    margin-top: 0.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #4b3e2e;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #76875d;
+}
+
+.contact-btn {
+    background-color: #9aac82;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #d9cb94;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.footer-left p {
+    margin: 0.3rem 0;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #5a4b3d;
+    line-height: 1.4;
+    margin-top: 0.3rem;
+}
+
+.socials {
+    margin-top: 1rem;
+}
+
+.socials a {
+    color: #4b3e2e;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #76875d;
+}
+
+/* ========== Tablets (≥ 600px) ========== */
+@media (min-width: 600px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .nav {
+        margin-top: 0;
+    }
+
+
+
+
+
+    /* ========== Desktops (≥ 992px) ========== */
+    @media (min-width: 992px) {
+
+        .footer {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+            padding: 1.2rem 3rem;
+        }
+
+        .footer-left {
+            max-width: 700px;
+        }
+
+        .disclaimer {
+            max-width: 650px;
+        }
+    }
