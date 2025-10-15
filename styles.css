@@ -18,6 +18,32 @@ a {
     color: inherit;
 }
 
+/* Global Button Styles */
+.button,
+button,
+input[type="submit"] {
+    background-color: #9aac82; /* leaf green shade */
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+    outline: none;
+}
+
+/* Hover / focus states */
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus {
+    background-color: #76875d; /* darker green for hover */
+}
 
 /* ========== Base (Mobile-First) ========== */
 
@@ -134,25 +160,20 @@ body {
         margin-top: 0;
     }
 
-
-
-
-
-    /* ========== Desktops (≥ 992px) ========== */
-    @media (min-width: 992px) {
-
-        .footer {
-            flex-direction: row;
-            justify-content: space-between;
-            text-align: left;
-            padding: 1.2rem 3rem;
-        }
-
-        .footer-left {
-            max-width: 700px;
-        }
-
-        .disclaimer {
-            max-width: 650px;
-        }
+/* ========== Desktops (≥ 992px) ========== */
+@media (min-width: 992px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 1.2rem 3rem;
     }
+
+    .footer-left {
+        max-width: 700px;
+    }
+
+    .disclaimer {
+        max-width: 650px;
+    }
+}

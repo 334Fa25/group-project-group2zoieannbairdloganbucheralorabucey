@@ -144,51 +144,47 @@ img {
 }
 
 /* Before and After Home Page Styles */
-.ba-grid {
-    display: grid;
-    gap: 1rem;
+.ba-outer { 
+  display: grid; 
+  gap: 1rem; 
 }
 
-.ba-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: var(--radius);
+.ba-outer img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: var(--radius);
+  object-fit: cover; /* makes them fill their cells neatly */
 }
 
+.col-left, 
+.col-right, 
+.left-bottom { 
+  display: grid; 
+  gap: 1rem; 
+}
+
+/* Mobile: stack naturally */
+.left-bottom { 
+  grid-template-columns: 1fr; 
+}
+
+/* Tablet/Desktop layout */
 @media (min-width: 700px) {
-    .ba-grid {
-        grid-template-columns: 1.6fr 1fr 1fr;
-        grid-template-areas:
-            "a a c"
-            "b b d"
-            "e f d";
-        align-items: start;
-    }
-    .a {
-        grid-area: a;
-    }
-    .b {
-        grid-area: b;
-    }
-    .c {
-        grid-area: c;
-    }
-    .d {
-        grid-area: d;
-    }
-    .e {
-        grid-area: e;
-    }
-    .f {
-        grid-area: f;
-    }
-}
+  .ba-outer {
+    grid-template-columns: 1.6fr 1fr; 
+    align-items: stretch; /* ensures both columns match heights */
+  }
 
-@media (min-width: 1024px) {
-    .ba-grid {
-        gap: 1.25rem;
-    }
+  /* left bottom becomes two equal columns */
+  .left-bottom { 
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  /* make right column (D + E) share space evenly */
+  .col-right { 
+    grid-template-rows: 1fr 1fr; 
+  }
 }
 
 .brand {
@@ -269,9 +265,8 @@ img {
     color: var(--earth-brown);
 }
 
-/* responsive grids */
 .cols-2 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* responsive grids */
 }
 
 .cols-3 {
@@ -335,4 +330,94 @@ label {
 
 .hidden {
     display: none !important;
+}
+
+/* Pricing Page Styles */
+
+.pricing-category .card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.pricing-category .card h4 {
+    margin-bottom: 0.5rem;
+}
+
+.pricing-category .card .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--leaf-green);
+    margin-bottom: 1rem;
+}
+
+.pricing-category .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.pricing-category .card ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Page Styles */
+/* =======================
+   Contact Page Styles
+   ======================= */
+
+.contact .container { gap: 2rem; }
+
+/* form area */
+.contact-form h2 { margin: 0 0 .5rem; }
+.contact-form .grid { gap: 1rem; }
+.contact-form .form-group label { display:block; margin-bottom:.25rem; }
+.contact-form textarea { min-height: 10rem; resize: vertical; }
+
+/* right visual */
+.contact-visual .image-wrap { position: relative; overflow: hidden; }
+.contact-visual img { width: 100%; height: auto; display: block; border-radius: var(--radius); }
+
+/* green overlay using palette */
+.contact-visual .overlay {
+  position: absolute; inset: 0;
+  background: var(--leaf-green);
+  opacity: .50;
+  border-radius: var(--radius);
+  pointer-events: none;
+}
+
+/* overlay text */
+.contact-visual .overlay-text {
+  position: absolute;
+  bottom: 1.25rem; right: 1.25rem;
+  margin: 0;
+  line-height: 1.1;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  color: var(--cream);
+  text-align: right;
+}
+
+/* stack on mobile */
+@media (max-width: 700px) {
+  .contact .container { gap: 1.25rem; }
+  .contact-visual .overlay-text { bottom: .75rem; right: .75rem; }
+}
+
+/* Make right image match form height (tablet & desktop only) */
+@media (min-width: 700px) {
+  .contact .container { align-items: stretch; }
+  .contact-visual .image-wrap { height: 100%; }
+  .contact-visual img { height: 100%; object-fit: cover; }
+  .contact-visual .overlay, 
+  .contact-visual .overlay-text { pointer-events: none; }
+}
+
+/* Mobile: revert to natural image height */
+@media (max-width: 699px) {
+  .contact-visual .image-wrap { height: auto; }
+  .contact-visual img { height: auto; object-fit: contain; }
 }

@@ -30,45 +30,65 @@
     </header>
 
     <!-- Main Section -->
-<main>
-    <section class="section">
-      <div class="container grid cols-2">
-        <div class="stack">
-          <h2>Get in Touch</h2>
-          <p>We’d love to hear about your next project. Use the form below or connect with us directly.</p>
+    <main>
+        <section class="section contact">
+            <div class="container grid cols-2">
+                <div class="contact-form">
+                    <h2>Contact us</h2>
+                    <p class="muted">Have a question or ready to get started? Start here.</p>
 
-          <form class="stack" action="#" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+                    <form action="#" method="post" class="stack">
+                        <div class="grid cols-2">
+                            <div class="form-group">
+                                <label for="first-name">First name</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="Jane" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last name</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Doe" required />
+                            </div>
+                        </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="janedoe@fakedomain.com" required />
+                        </div>
 
-            <label for="service">Service Interested In</label>
-            <select id="service" name="service">
-              <option>Garden Design</option>
-              <option>Lawn Care</option>
-              <option>Outdoor Living</option>
-              <option>Other</option>
-            </select>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option>Garden Design</option>
+                                <option>Lawn Care</option>
+                                <option>Outdoor Living</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5"></textarea>
+                        <div class="form-group">
+                            <label for="message">Your message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Describe your service to get a quote"
+                                rows="6"
+                                required></textarea>
+                        </div>
 
-            <button class="button" type="submit">Send Message</button>
-          </form>
-        </div>
-        <div class="stack">
-          <!-- ADD IMAGE HERE -->
-          <img src="img/contact-map.jpg" alt="Map showing Bright Sprouts location">
-          <h3>Our Office</h3>
-          <p>123 Greenway Drive<br>Maryville, MO 64468</p>
-          <p><strong>Email:</strong> hello@brightsprouts.com<br><strong>Phone:</strong> (555) 123-4567</p>
-        </div>
-      </div>
-    </section>
-  </main>
+                        <button type="submit" class="button" style="width: 100%">Submit</button>
+                    </form>
+                </div>
 
+                <!-- Image + overlay (no .card) -->
+                <div class="contact-visual">
+                    <div class="image-wrap round">
+                        <img src="img/patio.jpg" alt="Garden patio" />
+                        <span class="overlay"></span>
+                        <h3 class="overlay-text">Thank you for<br />Reaching Out</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
