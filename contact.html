@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bright Sprouts | Contact Us</title>
+    <title>Bright Sprouts | About Us</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="responsive.css" />
 </head>
 
 <body>
@@ -30,7 +30,44 @@
     </header>
 
     <!-- Main Section -->
+<main>
+    <section class="section">
+      <div class="container grid cols-2">
+        <div class="stack">
+          <h2>Get in Touch</h2>
+          <p>We’d love to hear about your next project. Use the form below or connect with us directly.</p>
 
+          <form class="stack" action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option>Garden Design</option>
+              <option>Lawn Care</option>
+              <option>Outdoor Living</option>
+              <option>Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button class="button" type="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="stack">
+          <!-- ADD IMAGE HERE -->
+          <img src="img/contact-map.jpg" alt="Map showing Bright Sprouts location">
+          <h3>Our Office</h3>
+          <p>123 Greenway Drive<br>Maryville, MO 64468</p>
+          <p><strong>Email:</strong> hello@brightsprouts.com<br><strong>Phone:</strong> (555) 123-4567</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
 
     <!-- Footer -->

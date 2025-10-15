@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bright Sprouts | Contact Us</title>
+    <title>Bright Sprouts | Home</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="responsive.css" />
 </head>
 
 <body>
@@ -20,6 +20,8 @@
             <img src="img/Logo-Plant.png" alt="Bright Sprouts logo" class="logo-img">
             <h1>Bright Sprouts</h1>
         </div>
+
+
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="service.html">Services</a>
@@ -30,9 +32,39 @@
     </header>
 
     <!-- Main Section -->
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h2>Welcome to Bright Sprouts</h2>
+                <p>Helping your outdoor spaces grow beautifully, one project at a time.</p>
+                <!-- ADD IMAGE HERE -->
+                <img src="img/hero.jpg" alt="Lush garden design">
+            </div>
+        </section>
 
-
-
+        <section class="section services-preview">
+            <div class="container grid cols-3">
+                <article class="card">
+                    <!-- ADD IMAGE HERE -->
+                    <img src="img/service1.jpg" alt="Service one">
+                    <h3>Garden Design</h3>
+                    <p>We create stunning and sustainable garden designs tailored to your needs.</p>
+                </article>
+                <article class="card">
+                    <!-- ADD IMAGE HERE -->
+                    <img src="img/service2.jpg" alt="Service two">
+                    <h3>Lawn Care</h3>
+                    <p>From mowing to fertilization, we’ll keep your lawn looking healthy year-round.</p>
+                </article>
+                <article class="card">
+                    <!-- ADD IMAGE HERE -->
+                    <img src="img/service3.jpg" alt="Service three">
+                    <h3>Outdoor Living</h3>
+                    <p>Transform your backyard into a welcoming outdoor retreat for family and friends.</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -51,6 +83,8 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
-
 </html>
