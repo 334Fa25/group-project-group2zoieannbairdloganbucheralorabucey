@@ -1,10 +1,10 @@
 /* responsive.css - generated */
 :root {
-    --leaf-green: #9CAF88;
+    --leaf-green: #9caf88;
     --earth-brown: #582008;
-    --cream: #F1ECD6;
-    --french-biege: #A67B5B;
-    --dark-cream: #DBD1A4;
+    --cream: #f1ecd6;
+    --french-biege: #a67b5b;
+    --dark-cream: #dbd1a4;
 
     --max-w: 1200px;
     --gap: clamp(0.75rem, 1vw, 1.25rem);
@@ -17,17 +17,23 @@
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html,
 body {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 body {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Arial,
+        sans-serif;
     color: var(--earth-brown);
     background: var(--cream);
     line-height: 1.55;
@@ -74,7 +80,115 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .75rem 0;
+    padding: 0.75rem 0;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-content .button {
+    display: inline-block; /* button keeps its natural size */
+    width: auto; /* prevents it from stretching */
+}
+
+/* Overview Section Styles */
+.overview {
+    padding: 2rem;
+}
+
+.overview .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.overview .card img {
+    max-width: 50%; /* keeps the image from overwhelming text */
+    height: auto;
+    border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+    .overview .card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .overview .card img {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* Section Preview Styles */
+.services-preview h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+/* Before and After Home Page Styles */
+.ba-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.ba-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+}
+
+@media (min-width: 700px) {
+    .ba-grid {
+        grid-template-columns: 1.6fr 1fr 1fr;
+        grid-template-areas:
+            "a a c"
+            "b b d"
+            "e f d";
+        align-items: start;
+    }
+    .a {
+        grid-area: a;
+    }
+    .b {
+        grid-area: b;
+    }
+    .c {
+        grid-area: c;
+    }
+    .d {
+        grid-area: d;
+    }
+    .e {
+        grid-area: e;
+    }
+    .f {
+        grid-area: f;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ba-grid {
+        gap: 1.25rem;
+    }
 }
 
 .brand {
@@ -93,7 +207,7 @@ img {
 .menu a {
     color: var(--earth-brown);
     text-decoration: none;
-    padding: .5rem .75rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 999px;
 }
 
@@ -106,18 +220,18 @@ img {
     display: inline-flex;
     border: 0;
     background: transparent;
-    font-size: 1.25rem
+    font-size: 1.25rem;
 }
 
-@media (max-width:899px) {
+@media (max-width: 899px) {
     .menu {
-        display: none
+        display: none;
     }
 
     .menu.open {
         display: flex;
         flex-direction: column;
-        padding: .5rem 0;
+        padding: 0.5rem 0;
     }
 }
 
@@ -134,14 +248,14 @@ img {
     border: 1px solid #00000010;
     border-radius: var(--radius);
     padding: clamp(1rem, 2.5vw, 1.5rem);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: .65rem 1rem;
+    padding: 0.65rem 1rem;
     border-radius: 999px;
     border: 1px solid var(--earth-brown);
     background: var(--leaf-green);
@@ -157,18 +271,18 @@ img {
 
 /* responsive grids */
 .cols-2 {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
 }
 
 .cols-3 {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
 }
 
 .cols-4 {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
 }
 
-@media (min-width:700px) {
+@media (min-width: 700px) {
     .cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -178,7 +292,7 @@ img {
     }
 }
 
-@media (min-width:980px) {
+@media (min-width: 980px) {
     .cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -193,7 +307,7 @@ input,
 textarea,
 select {
     width: 100%;
-    padding: .75rem;
+    padding: 0.75rem;
     border-radius: 10px;
     border: 1px solid #00000022;
     background: #fff;
@@ -202,7 +316,7 @@ select {
 
 label {
     display: block;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
     font-weight: 600;
 }
 
@@ -212,7 +326,7 @@ label {
 }
 
 .muted {
-    opacity: .9
+    opacity: 0.9;
 }
 
 .center {
