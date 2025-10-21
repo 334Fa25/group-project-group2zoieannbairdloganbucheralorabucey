@@ -175,5 +175,45 @@ body {
 
     .disclaimer {
         max-width: 650px;
+    } /* ← closes the desktop media query properly */
     }
+/* ========================
+   Overlay Image Section
+   ======================== */
+
+.image-container {
+  position: relative;
+ width: 100%;
+}/*
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+ top: 50px;
+    right: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50rem;
+}
+*/
+.overlay-text {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    left: 10px;
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+    
 }
