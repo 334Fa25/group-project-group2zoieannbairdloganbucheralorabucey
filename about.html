@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,19 +28,25 @@
             <a href="contact.html" class="contact-btn">Contact Us</a>
         </nav>
     </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="img/house3After.png" alt="Bright Sprouts Team" />
+        <div class="hero-content">
+            <h2>About Bright Sprouts</h2>
+            <p>We are passionate about creating sustainable and beautiful outdoor spaces for every home.</p>
+            <a href="contact.html" class="button">Get in Touch</a>
+        </div>
+    </section>
 
     <!-- Main Section -->
     <main>
         <!-- Intro / Company Story -->
-        <section class="section center">
+
+        <!-- Intro / Company Story -->
+        <section class="section about-intro">
             <div class="container">
-                <h2 style="font-size: var(--fs-xl); margin: 0">About Us</h2>
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <div class="card" style="padding: 2rem">
-                    <div class="grid cols-2" style="align-items: start">
+                <div class="card about-card">
+                    <div class="grid cols-2 align-start">
                         <div class="stack">
                             <h3>Company Story</h3>
                             <p>
@@ -59,9 +64,8 @@
                                 Whether it’s a cozy backyard garden or a vibrant commercial property, our designs
                                 enhance beauty and functionality year-round.
                             </p>
-                            <a class="button" href="contact.html">Lets get in touch!</a>
                         </div>
-                        <div>
+                        <div class="about-image">
                             <img src="img/backyard.jpg" alt="Landscape with path" class="round" />
                         </div>
                     </div>
@@ -70,21 +74,21 @@
         </section>
 
         <!-- Meet the Staff -->
-        <section class="section">
+        <section class="section about-staff">
             <div class="container">
-                <div class="card" style="padding: 2rem">
+                <div class="card about-card">
                     <h2>Meet The Staff</h2>
-                    <div class="grid cols-3">
-                        <article class="stack">
+                    <div class="grid cols-3 staff-grid">
+                        <article class="stack staff-member">
                             <img src="img/amie-roussel-rvw7VYvwsbI-unsplash.jpg" alt="Jamie Rivers" class="round" />
-                            <h4>Jamie Rivers – Owner &amp; Designer</h4>
+                            <h4>Jamie Rivers – Owner & Designer</h4>
                             <p>
                                 "I believe a garden should be both beautiful and kind to the planet." Jamie’s expertise
                                 in horticulture and sustainable design guides every project.
                             </p>
                         </article>
 
-                        <article class="stack">
+                        <article class="stack staff-member">
                             <img src="img/sonny-mauricio-FNje9ySkm9o-unsplash.jpg" alt="Carlos Lopez" class="round" />
                             <h4>Carlos Lopez – Irrigation Specialist</h4>
                             <p>
@@ -93,7 +97,7 @@
                             </p>
                         </article>
 
-                        <article class="stack">
+                        <article class="stack staff-member">
                             <img src="img/marcela-miranda-Y2b0JlknE6M-unsplash.jpg" alt="Mina Patel" class="round" />
                             <h4>Mina Patel – Maintenance Lead</h4>
                             <p>
@@ -107,78 +111,76 @@
         </section>
 
         <!-- Blogs & Articles -->
-        <section class="section">
+        <section class="section about-blogs">
             <div class="container">
                 <h2>Blogs &amp; Articles</h2>
-                <div class="grid cols-3">
-                    <article class="card" style="padding: 0; overflow: hidden">
-                        <img src="img/house3After.png" alt="" />
-                        <div style="padding: 1rem">
-                            <h4>New systems interactions are usurping regions.</h4>
-                            <p class="muted">
-                                The interaction of multiple elements can create effects greater than the sum of their
-                                parts.
-                            </p>
-                            <div class="flex" style="justify-content: space-between; margin-top: 0.75rem">
-                                <div class="flex" style="gap: 0.5rem; align-items: center">
-                                    <img
-                                        src="img/amie-roussel-rvw7VYvwsbI-unsplash.jpg"
-                                        alt=""
-                                        style="width: 28px; height: 28px; border-radius: 999px" />
-                                    <small>Joane Smith · Business Solutions</small>
+                <div class="blog-disclaimer card">
+                    <p>
+                        Our team recommends these articles to help you learn more about eco-friendly landscaping, sustainable lawns, and caring for the environment. Check them out!
+                    </p>
+                </div>
+                <div class="grid cols-3 blog-grid">
+                    <article class="card blog-card">
+                        <a href="https://www.nationalgeographic.com/environment/article/grass-lawn-alternatives-clover-moss-sedge-native-plants" target="_blank">
+                            <img src="img/house3After.png" alt="Clover lawn alternative" />
+                            <div class="blog-content">
+                                <h4>Why clover lawns are a good alternative to grass</h4>
+                                <p class="muted">
+                                    Explore how clovser lawns require less mowing and watering, and naturally enrich the soil.
+                                </p>
+                                <div class="flex blog-footer">
+                                    <div class="flex author-info">
+                                        <img src="img/amie-roussel-rvw7VYvwsbI-unsplash.jpg" alt="Joane Smith" />
+                                        <small>Ally Hirschlag · Environmental Solutions</small>
+                                    </div>
+                                    <small>20 Jul 2023</small>
                                 </div>
-                                <small>25 Apr</small>
                             </div>
-                        </div>
+                        </a>
                     </article>
-
-                    <article class="card" style="padding: 0; overflow: hidden">
-                        <img src="img/house1.jpg" alt="" />
-                        <div style="padding: 1rem">
-                            <h4>New systems interactions are usurping regions.</h4>
-                            <p class="muted">
-                                The interaction of multiple elements can create effects greater than the sum of their
-                                parts.
-                            </p>
-                            <div class="flex" style="justify-content: space-between; margin-top: 0.75rem">
-                                <div class="flex" style="gap: 0.5rem; align-items: center">
-                                    <img
-                                        src="img/amie-roussel-rvw7VYvwsbI-unsplash.jpg"
-                                        alt=""
-                                        style="width: 28px; height: 28px; border-radius: 999px" />
-                                    <small>Joane Smith · Business Solutions</small>
+                    <article class="card blog-card">
+                        <a href="https://www.nationalgeographic.com/science/article/150521-turf-terminators-xeriscape-california-drought-tolerant-lawns-water-savings" target="_blank">
+                            <img src="img/house3After.png" alt="Drought-tolerant landscaping" />
+                            <div class="blog-content">
+                                <h4>5 Water-Saving Ways to Replace Lawns During California’s Drought</h4>
+                                <p class="muted">
+                                    Learn about eco-friendly alternatives to traditional lawns that conserve water and reduce maintenance.
+                                </p>
+                                <div class="flex blog-footer">
+                                    <div class="flex author-info">
+                                        <img src="img/amie-roussel-rvw7VYvwsbI-unsplash.jpg" alt="Joane Smith" />
+                                        <small>Brian Clark Howard · Sustainable Living</small>
+                                    </div>
+                                    <small>21 May 2015</small>
                                 </div>
-                                <small>25 Apr</small>
                             </div>
-                        </div>
+                        </a>
                     </article>
-
-                    <article class="card" style="padding: 0; overflow: hidden">
-                        <img src="img/house2.jpg" alt="" />
-                        <div style="padding: 1rem">
-                            <h4>New systems interactions are usurping regions.</h4>
-                            <p class="muted">
-                                The interaction of multiple elements can create effects greater than the sum of their
-                                parts.
-                            </p>
-                            <div class="flex" style="justify-content: space-between; margin-top: 0.75rem">
-                                <div class="flex" style="gap: 0.5rem; align-items: center">
-                                    <img
-                                        src="img/amie-roussel-rvw7VYvwsbI-unsplash.jpg"
-                                        alt=""
-                                        style="width: 28px; height: 28px; border-radius: 999px" />
-                                    <small>Joane Smith · Business Solutions</small>
+                    <article class="card blog-card">
+                        <a href="https://www.nationalgeographic.com/environment/article/native-plants-garden-lawn-pollinators" target="_blank">
+                            <img src="img/house3After.png" alt="Native plant garden" />
+                            <div class="blog-content">
+                                <h4>Why you should add native plants to your garden</h4>
+                                <p class="muted">
+                                    Discover the benefits of native plants in supporting biodiversity and reducing environmental impact.
+                                </p>
+                                <div class="flex blog-footer">
+                                    <div class="flex author-info">
+                                        <img src="img/amie-roussel-rvw7VYvwsbI-unsplash.jpg" alt="Joane Smith" />
+                                        <small>Sarah Gibbens · Gardening Insights</small>
+                                    </div>
+                                    <small>21 Apr 2023</small>
                                 </div>
-                                <small>25 Apr</small>
                             </div>
-                        </div>
+                        </a>
                     </article>
                 </div>
             </div>
         </section>
+
     </main>
 
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-left">

@@ -22,7 +22,8 @@ a {
 .button,
 button,
 input[type="submit"] {
-    background-color: #9aac82; /* leaf green shade */
+    background-color: #9aac82;
+    /* leaf green shade */
     color: #fff;
     padding: 0.4rem 0.8rem;
     border: none;
@@ -42,7 +43,8 @@ input[type="submit"]:hover,
 .button:focus,
 button:focus,
 input[type="submit"]:focus {
-    background-color: #76875d; /* darker green for hover */
+    background-color: #76875d;
+    /* darker green for hover */
 }
 
 /* ========== Base (Mobile-First) ========== */
@@ -160,31 +162,34 @@ body {
         margin-top: 0;
     }
 
-/* ========== Desktops (≥ 992px) ========== */
-@media (min-width: 992px) {
-    .footer {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-        padding: 1.2rem 3rem;
+    /* ========== Desktops (≥ 992px) ========== */
+    @media (min-width: 992px) {
+        .footer {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+            padding: 1.2rem 3rem;
+        }
+
+        .footer-left {
+            max-width: 700px;
+        }
+
+        .disclaimer {
+            max-width: 650px;
+        }
     }
 
-    .footer-left {
-        max-width: 700px;
-    }
-
-    .disclaimer {
-        max-width: 650px;
-    } /* ← closes the desktop media query properly */
-    }
-/* ========================
+    /* ========================
    Overlay Image Section
    ======================== */
 
-.image-container {
-  position: relative;
- width: 100%;
-}/*
+    .image-container {
+        position: relative;
+        width: 100%;
+    }
+
+    /*
 
 .image-container img {
   width: 100%;
@@ -203,17 +208,17 @@ body {
   border-radius: 50rem;
 }
 */
-.overlay-text {
-    position: absolute;
-    top: 75px;
-    right: 10px;
-    left: 10px;
-  color: #fff;
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  letter-spacing: 1px;
-}
+    .overlay-text {
+        position: absolute;
+        top: 75px;
+        right: 10px;
+        left: 10px;
+        color: #fff;
+        font-size: 3rem;
+        font-family: 'Playfair Display', serif;
+        text-align: center;
+        letter-spacing: 1px;
+    }
 
-    
+
 }
