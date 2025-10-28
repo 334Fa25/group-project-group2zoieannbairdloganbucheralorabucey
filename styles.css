@@ -112,6 +112,9 @@ body {
     border-radius: 6px;
 }
 
+.contact-visual {
+  margin-bottom: 3rem; /* pushes the footer down */
+}
 
 /* Footer */
 .footer {
@@ -121,6 +124,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 1.5rem 1rem;
+  
 }
 
 .footer-left p {
