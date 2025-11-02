@@ -20,7 +20,14 @@
             <img src="img/Logo-Plant.png" alt="Bright Sprouts logo" class="logo-img">
             <h1>Bright Sprouts</h1>
         </div>
-        <nav class="nav">
+        <!-- button for JS toggle (accessible) -->
+        <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav" id="main-nav">
             <a href="index.html">Home</a>
             <a href="service.html">Services</a>
             <a href="about.html">About Us</a>
@@ -76,8 +83,8 @@
                 <!-- Image + overlay (no .card) -->
                 <div class="contact-visual">
                     <div class="image-wrap round">
-                        <img src="img/patio.jpg" alt="Garden patio"/>                    
-                        <span class="overlay" ></span>
+                        <img src="img/patio.jpg" alt="Garden patio" />
+                        <span class="overlay"></span>
                         <h3 class="overlay-text">Thank you for<br />Reaching Out</h3>
                     </div>
                 </div>
@@ -86,7 +93,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" >
+    <footer class="footer">
         <div class="footer-left">
             <p>© 2025 Bright Sprouts Landscaping. All rights reserved.</p>
             <p class="disclaimer">
