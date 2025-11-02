@@ -1,4 +1,6 @@
-/* Global Styles */
+/* =======================================
+   Global Styles
+======================================= */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -23,7 +25,6 @@ a {
 button,
 input[type="submit"] {
     background-color: #9aac82;
-    /* leaf green shade */
     color: #fff;
     padding: 0.4rem 0.8rem;
     border: none;
@@ -36,7 +37,6 @@ input[type="submit"] {
     outline: none;
 }
 
-/* Hover / focus states */
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -44,11 +44,9 @@ input[type="submit"]:hover,
 button:focus,
 input[type="submit"]:focus {
     background-color: #76875d;
-    /* darker green for hover */
 }
 
 /* ========== Base (Mobile-First) ========== */
-
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f8f3e1;
@@ -64,7 +62,6 @@ body {
     justify-content: space-between;
     background-color: #d9cb94;
     padding: 0.6rem 1.2rem;
-    /* slightly smaller top/bottom */
     position: relative;
     z-index: 1000;
 }
@@ -100,10 +97,6 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-    position: absolute;
-    right: 1.2rem;
-    top: 50%;
-    transform: translateY(-50%);
     z-index: 1100;
 }
 
@@ -116,7 +109,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hamburger animation when open */
 .menu-btn.open .bar:nth-child(1) {
     transform: rotate(45deg) translateY(8px);
 }
@@ -129,65 +121,54 @@ body {
     transform: rotate(-45deg) translateY(-8px);
 }
 
-/* ========================
-   Mobile Nav with Slide Animation
-======================== */
+/* Mobile Nav */
 .nav {
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: #d9cb94;
     text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease-in-out;
+    padding: 0;
+    margin: 0;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
-
-    /* Animation setup */
-    max-height: 0;
-    /* hide by default */
-    overflow: hidden;
-    /* hide content when collapsed */
-    transition: max-height 0.35s ease-in-out;
-    padding: 0;
-    /* remove extra padding */
-    margin: 0;
-    /* remove top margin */
 }
 
-/* Open state */
 .nav.open {
     max-height: 500px;
-    /* large enough to fit all links */
 }
 
-/* Nav links */
 .nav a {
     padding: 1rem 0;
     font-weight: 500;
+    font-family:  'Playfair Display', serif;
     text-decoration: none;
     color: #4b3e2e;
-    transition: color 0.3s ease;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    /* optional separator */
     margin: 0;
 }
 
-/* Remove border on last link */
 .nav a:last-child {
     border-bottom: none;
+    color: #f8f3e1;
 }
 
-/* Hover state */
 .nav a:hover {
     color: #76875d;
+ 
 }
 
-/* Contact button spacing */
 .contact-btn {
-    margin: 0.5rem 0;
-    padding: 0.6rem 1rem;
+    background-color: #9aac82;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
     border-radius: 6px;
+    text-decoration: none;
 }
 
 /* Footer */
@@ -198,7 +179,6 @@ body {
     align-items: center;
     text-align: center;
     padding: 1.5rem 1rem;
-
 }
 
 .footer-left p {
@@ -228,8 +208,10 @@ body {
     color: #76875d;
 }
 
-/* ========== Tablets (≥ 600px) ========== */
-@media (min-width: 600px) {
+/* ==========================
+   Tablet & Desktop Styles (≥ 600px)
+========================== */
+@media (min-width: 675px) {
     .header {
         flex-direction: row;
         justify-content: space-between;
@@ -240,12 +222,16 @@ body {
         display: none;
     }
 
+    /* Reset nav for desktop/tablet */
     .nav {
-        display: flex;
+        position: static;
         flex-direction: row;
-        background: none;
+        max-height: none;
+        display: flex !important;
         width: auto;
-        margin-top: 0;
+        background: none;
+        padding: 0;
+        margin: 0;
     }
 
     .nav a {
@@ -253,64 +239,37 @@ body {
         padding: 0;
         border: none;
     }
-
-    /* ========== Desktops (≥ 992px) ========== */
-    @media (min-width: 992px) {
-        .footer {
-            flex-direction: row;
-            justify-content: space-between;
-            text-align: left;
-            padding: 1.2rem 3rem;
-        }
-
-        .footer-left {
-            max-width: 700px;
-        }
-
-        .disclaimer {
-            max-width: 650px;
-        }
-    }
-
-    /* ========================
-   Overlay Image Section
-   ======================== */
-
-    .image-container {
-        position: relative;
-        width: 100%;
-    }
-
-    /*
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
+    
+    .nav a:last-child {
+   padding: 0 0.5rem
+}
+    
+   .contact-btn {
+    background-color: #9aac82;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+}
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
- top: 50px;
-    right: 20px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50rem;
-}
-*/
-    .overlay-text {
-        position: absolute;
-        top: 75px;
-        right: 10px;
-        left: 10px;
-        color: #fff;
-        font-size: 3rem;
-        font-family: 'Playfair Display', serif;
-        text-align: center;
-        letter-spacing: 1px;
+/* ==========================
+   Desktop Styles (≥ 992px)
+========================== */
+@media (min-width: 992px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 1.2rem 3rem;
     }
 
+    .footer-left {
+        max-width: 700px;
+    }
 
+    .disclaimer {
+        max-width: 650px;
+    }
 }
+
