@@ -437,9 +437,17 @@ label {
     opacity: 0.5;
     border-radius: var(--radius);
     pointer-events: none;
-    margin-bottom: 2rem;
+    
 }
-
+.contact-visual {
+    margin-bottom: 3rem; /* or padding-bottom */
+}
+ 
+#submit {
+    display: inline-block; 
+    margin-bottom: 3rem; /* space before footer */
+}
+    
 .contact-visual .overlay-text {
     position: absolute;
     bottom: 1.25rem;
