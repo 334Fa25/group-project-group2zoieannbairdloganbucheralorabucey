@@ -437,6 +437,7 @@ label {
     opacity: 0.5;
     border-radius: var(--radius);
     pointer-events: none;
+    margin-bottom: 2rem;
 }
 
 .contact-visual .overlay-text {
