@@ -48,7 +48,7 @@ a {
 .button,
 button,
 input[type="submit"] {
-    background-color: #9aac82;
+    background-color: #76875d;
     color: #fff;
     padding: 0.4rem 0.8rem;
     border: none;
@@ -67,7 +67,7 @@ input[type="submit"]:hover,
 .button:focus,
 button:focus,
 input[type="submit"]:focus {
-    background-color: #76875d;
+    background-color: #687950;
 }
 
 /* ========== Base (Mobile-First) ========== */
