@@ -1,6 +1,30 @@
 /* =======================================
    Global Styles
 ======================================= */
+/* Skip Link – hidden until focused */
+.skip-link {
+    position: absolute;
+    top: -75px; /* hide above screen */
+    left: 0;
+    background: #7a8b5e ; /* dark green or your brand color */
+    color: white;
+    padding: 0.75rem 1rem;
+    z-index: 1000;
+    border-radius: 0 0 0.5rem 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+
+    /* visually hidden style */
+    transition: top 0.3s ease;
+}
+
+/* When focused (keyboard navigation), show it */
+.skip-link:focus {
+    top: 0; /* becomes visible */
+    outline: 3px solid #fff; /* accessible focus indicator */
+}
+
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
